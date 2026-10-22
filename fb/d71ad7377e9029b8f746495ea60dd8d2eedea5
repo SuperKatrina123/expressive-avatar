@@ -1,0 +1,19 @@
+README.md
+  s_5825c7831663d3::t_7bbe26c971189e 1-300
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.51-trip",
+  "base_commit_sha": "fbd71ad7377e9029b8f746495ea60dd8d2eedea5",
+  "prompts": {},
+  "sessions": {
+    "s_5825c7831663d3": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a16365-eb3d-7dc2-94bd-5d8210c6afd6",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "yy_ying <yy_ying@trip.com>"
+    }
+  }
+}
