@@ -1,0 +1,4 @@
+interface:
+  display_name: "Expressive Avatar"
+  short_description: "Turn avatar artwork and interaction requests into a web component"
+  default_prompt: "Use $expressive-avatar to validate my avatar artwork, translate my interaction requirements into a manifest, and integrate the generated component."

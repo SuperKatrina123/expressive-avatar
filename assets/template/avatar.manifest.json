@@ -1,0 +1,48 @@
+{
+  "version": 1,
+  "mode": "basic",
+  "canvas": { "width": 512, "height": 512 },
+  "appearance": { "background": "transparent", "ink": "#171614" },
+  "poses": {
+    "rest": "./rest.png",
+    "left": "./left.png",
+    "right": "./right.png",
+    "down": "./down.png",
+    "wonder": "./wonder.png"
+  },
+  "intro": {
+    "outline": "./outline.svg",
+    "paint": "./paint.svg",
+    "replayHours": 24,
+    "fastFinishMs": 300
+  },
+  "look": { "faceAnchor": [0.48, 0.37], "deadRadius": 0.25, "coneDegrees": 75 },
+  "glasses": {
+    "left": { "cx": 190, "cy": 224, "r": 40 },
+    "right": { "cx": 312, "cy": 217, "r": 40 },
+    "bridgePath": "M230 220 L272 218",
+    "strokeWidth": 2.7,
+    "origin": [251, 220],
+    "lift": [0.38, -0.22],
+    "spring": { "stiffness": 0.1, "damping": 0.45 }
+  },
+  "wonder": {
+    "durationMs": 1400,
+    "staggerMs": 110,
+    "marks": [
+      { "path": "M405 226C406 214 416 208 426 209C439 210 446 220 443 232C441 240 432 244 429 253", "dot": [430, 268] },
+      { "path": "M427 171C429 154 442 145 458 146C476 147 487 161 483 177C480 189 468 194 461 205", "dot": [460, 220] },
+      { "path": "M454 224C459 211 471 207 482 211C494 215 498 227 492 237C486 246 475 248 469 259", "dot": [466, 274] }
+    ]
+  },
+  "rules": [
+    { "when": "look-left", "do": ["pose:left", "question-marks"], "onceUntilLeave": true },
+    { "when": "look-right", "do": ["pose:right"] },
+    { "when": "look-down", "do": ["pose:down"] },
+    { "when": "look-away", "do": ["pose:rest"] },
+    { "when": "wonder", "do": ["pose:wonder", "question-marks"] },
+    { "when": "glasses-lift", "do": ["glasses:lift"] },
+    { "when": "glasses-release", "do": ["glasses:return"] }
+  ],
+  "notes": "Turn left and show question marks; turn right and down without marks."
+}
